@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# Allow the .gitignore file itself
+!.gitignore
+
+# Allow the TrendsBackEnd directory and its contents
+!TrendsBackEnd/
+!TrendsBackEnd/**
+
+# Allow the users directory and its contents
+!users/
+!users/**
