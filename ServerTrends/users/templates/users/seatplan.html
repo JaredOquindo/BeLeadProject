@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
+    <title>WAWA|part</title>
+</head>
+<style>
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
+}
+.logo{
+    float: left;
+}
+.header{
+    font-family: 'Changa One';
+    color: white;
+    text-shadow: 2px 2px 4px #47392d;
+    text-align: right;
+    width: 95%;
+    padding: 10px;
+}
+.content {
+    border-radius: 12px;
+    background-color: #ffffff9e;
+    position: absolute;
+    height: 80%;
+    width: 95%;
+    padding: 1%;
+    margin: 1%;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    background-color: #E3A72F;
+    border-radius: 50px;
+    margin-left: 65%;
+    width: 30%;
+    height: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    padding-right: 1%;
+}
+.inside {
+    background-color: #503D2E;
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 1%;
+    width: 135px;
+    height: 56px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.class{
+    border-radius: 12px;
+    background-color: #ffffff9e;
+    position: absolute;
+    height: 80%;
+    left: auto;
+    width: 15%;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    padding: 1%;
+    margin: 1%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+    background-color: #E3A72F;
+    border-radius: 50px;
+    width: 300px;
+    height: 89px;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    padding-right: 1%;
+    margin: 1% 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #7C7063;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 100px; /* Adjust this value to move the container lower */
+}
+.item {
+    background-color: #E7E7E7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #7c7063;
+    height: 100px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+}
+</style>
+<body>
+    <div class="logo">
+        <img src="https://github.com/JaredOquindo/BeLead/blob/main/Beleadd.png?raw=true" alt="Trulli" width="100" height="100">
+    </div>
+    <div class="header">
+        <h1>SEAT PLAN</h1>
+    </div>
+    <div class="content">
+        <div class="head">
+                <div class="inside">
+                    <h6>Attendance</h6>
+                </div>
+                <div class="inside">
+                    <h6>Seat Plan </h6>
+                </div>
+        </div>
+        <div class="container">
+            <div class="item" id="item1" contenteditable="true"></div>
+            <div class="item" id="item2" contenteditable="true"></div>
+            <div class="item" id="item3" contenteditable="true"></div>
+            <div class="item" id="item4" contenteditable="true"></div>
+            <div class="item" id="item5" contenteditable="true"></div>
+            <div class="item" id="item6" contenteditable="true"></div>
+            <div class="item" id="item7" contenteditable="true"></div>
+            <div class="item" id="item8" contenteditable="true"></div>
+            <div class="item" id="item9" contenteditable="true"></div>
+            <div class="item" id="item10" contenteditable="true"></div>
+            <div class="item" id="item11" contenteditable="true"></div>
+            <div class="item" id="item12" contenteditable="true"></div>
+            <div class="item" id="item13" contenteditable="true"></div>
+            <div class="item" id="item14" contenteditable="true"></div>
+            <div class="item" id="item15" contenteditable="true"></div>
+            <div class="item" id="item16" contenteditable="true"></div>
+            <div class="item" id="item17" contenteditable="true"></div>
+            <div class="item" id="item18" contenteditable="true"></div>
+            <div class="item" id="item19" contenteditable="true"></div>
+            <div class="item" id="item20" contenteditable="true"></div>
+            <!-- Add more item divs as needed -->
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    // Function to handle user input and update items
+    function updateItem(event) {
+        var itemElement = event.target;
+        var userInput = itemElement.textContent.trim();
+        // Update item only if user input is not empty
+        if (userInput !== "") {
+            itemElement.textContent = userInput;
+            // Save data to local storage
+            localStorage.setItem(itemElement.id, userInput);
+        }
+    }
+
+    // Restore saved data from local storage
+    function restoreData() {
+        document.querySelectorAll('.item').forEach(function(item) {
+            var savedData = localStorage.getItem(item.id);
+            if (savedData !== null) {
+                item.textContent = savedData;
+            }
+        });
+    }
+
+    // Add event listener to container to handle clicks on items
+    document.querySelector('.container').addEventListener('click', function(event) {
+        if (event.target.classList.contains('item')) {
+            updateItem(event);
+        }
+    });
+</script>

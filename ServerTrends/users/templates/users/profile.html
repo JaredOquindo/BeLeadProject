@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <title>WAWA|part</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="Home.css">
 </head>
 <style>
-body{
+    body{
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(to top, #503d2e, #57412e, #5d462d, #634b2c, #68502b, #7d5c3d, #906951, #a37666, #be9496, #d1b7c1, #e4dbe4, #ffffff);
+    background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
 }
 .logo{
     float: left;
@@ -28,14 +29,13 @@ body{
     background-color: #ffffff9e;
     position: absolute;
     height: 80%;
-    width: 65%;
+    width: 75%;
     left: 20%;
     padding: 1%;
     margin: 1%;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
-    padding-left: 10%;
+    padding-left: 1%;
 }
-
 .sign{
     margin-top: 5%;
     margin-left: 10%;
@@ -87,7 +87,6 @@ body{
     color: #fff;
     transform: translateY(1px);
 }
-
 .class{
     border-radius: 12px;
     background-color: #ffffff9e;
@@ -101,37 +100,40 @@ body{
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 .dashboard{
-    font-family: 'Changa One';
-    font-size:larger;
-    padding-left: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px #47392d;
-}
+        font-family: 'Changa One';
+        font-size:larger;
+        padding-left: 20px;
+        color: white;
+        text-shadow: 2px 2px 4px #47392d;
+        display: flex;
+        justify-content: center;
+        margin-right: 15%;
+    }
 .login{
     margin: 10px;
     text-align: center;
     padding-left: 35px;
 }
 .dash{
-    height: 60%;
-    border-radius: 12px;
-    margin: 10px;
-    padding: 5px;
-    overflow: scroll;
-
-}
+        height: 75%;
+        border-radius: 12px;
+        margin: 10px;
+        padding: 5px;
+        overflow: scroll;
+    }
 .profile,.settings,.logout{
     font-family: 'Changa One';
-    border-radius: 12px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    height: 30px;
-    padding: 5px;
-    box-sizing: border-box;
-    background-color: #E3A72F;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    color: #47392d;
+        border-radius: 50px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        width: 70%;
+        height: 30px;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: #E3A72F;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        color: white;
+        font-weight: 100;
 }
 .profile:hover,.settings:hover,.logout:hover {
     background-color: #47392d;
@@ -139,20 +141,22 @@ body{
     color: #fff;
     transform: translateY(-5px);
 }
-
 .subjects{
     font-family: 'Changa One';
     text-align:left;
-    padding-left: 15px;
+
     border-radius: 12px;
     background-color: #47392d;
-    width: 90%;
+    width: 95%;
     height: 15%;
     margin-bottom: 10px;
     color: white;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    display: flex;
+        justify-content: center;
+        font-weight: 100;
 }
 .nosubjects{
     font-family: 'Changa One';
@@ -184,212 +188,142 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: #47392d; 
 }
-.text-inside {
-    color:#503D2E;
-    font-family: 'Changa One';
-    margin-top: 5%;
-    text-align: center;
-    margin-left: -10%;
-    font-size:x-large;
-    margin-top: 10px;
-}
-.subject-name{
-    font-family: 'Changa One';
-    color:#503D2E;
-    margin-top:3%;
-    margin-left: 55px;
-}
-.subject-box input{
-    padding: 10px;
-    border: none;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
-    border-radius: 20px;
-    text-align: center;
-    background-color: white; 
-    margin-left: -9%;
-    width: 30%;
-      }
-.subject-code{
-    color:#503D2E;
-    font-family: 'Changa One';
-    margin-top: -9%;
-    text-align: center;
-    margin-left:50%;
-    padding: 5.5px;
-}
-.subject-boxes input{
-    padding: 11px;
-    border: none;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
-    border-radius: 20px;
-    background-color: white; 
-    width:58%;
-      margin-left: -2%;  
-}
 
-.Subject-Schedule{
-    background: #7C7063; 
-    color: white;
-    display: flex;   
-    justify-content: center; 
-    align-items: top; 
-    padding-bottom: 25%;
-    width: 50%; 
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
-    border-radius: 50px;
-    margin-top: 3%;
-    margin-left: 18%;     
-    border: none;   
+.subjects2{
+    background-color: #503d2e;
+    float: left;
+    border-radius: 12px;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 20%;
+    width: 20%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+.subjects3{
+    background-color: #503d2e88;
+    float: left;
+    border-radius: 12px;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 20%;
+    width: 20%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    
+}
+.name1{
+    margin-left: 38%;
+    margin-top: 20%;
+    height: 20%;
+    width: 20%;
+}
+.subname{
+    margin-top: 2%;
+    margin-left: 1%;
+    position:absolute;
+    font-size: 50px;
     font-family: 'Changa One';
-    word-spacing: 10px;
-    letter-spacing: 3px;
-}
-.Timer{
-    font-family: 'Changa One';
-    color:#503D2E;
-    margin-left: 40%;
-    margin-top:-25%;
-}   
-.time{
-    margin-left: 26%;
-}
-.time input{
-        border-radius: 90px;
-        width: 10%;
-        margin-top:auto;
-        border: none;
-        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);  
-        height: 30px;
-        text-align: center;
-}
-.day{
-    font-family: 'Changa One';  
-    color:#503D2E;  
-    margin-left: 40.5%;
-    margin-top: 3%;
-}
-.week {
-    margin-left: 26%;
-}
-.week input{
-        border-radius: 90px;
-        width: 5%;
-        border: none;
-        height: 30px;
-        text-align: center;
-        margin-left: 5%;
-      
-}
-.weekday input{
-        margin-top: 3%;
-        margin-bottom: 11%;
-        margin-left: 5.2%;
-}
-.schoolday{
-    margin-top: 10px;
-    font-family: 'Changa One';  
     color: white;
+    letter-spacing: 2px;
 }
-.next-button {
-    border-radius: 25px;
-    height: 5%;
-    width: 6%;
-    background-color:#503d2e;
-    color: white;
-    border: none;
-    font-size: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+.subname2{
     position: absolute;
-    bottom: 20%; 
-    right: 22%;
+    margin-left: 1%;
+    margin-top:4%;
     font-family: 'Changa One';
-    margin-bottom: -8%;
+    color: white;
+    letter-spacing: 2px;
 }
-
+.welcome{
+    position: absolute;
+    border-radius: 12px;
+    margin-left: 68%;
+    margin-top: 37%;
+    height: 30%;
+    width: 30%;
+}
+.insidewelcome{
+    color: #47392d;
+    font-family: 'Changa One';
+    padding-top: 10%;
+    text-align: center;
+    background-color: #ffffff9e;
+    border-radius: 12px;
+    height: 55%;
+    width: 100%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.47);
+    transition: all 5s ease-in-out;
+}
+.design{
+    background-color: #ffffff63;
+    border-radius: 12px;
+    margin-left: 60%;
+    margin-top: 1%;
+    height: 10%;
+    width: 40%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.47);
+}
+.design2{
+    background-color: #ffffff34;
+    border-radius: 12px;
+    margin-left: 75%;
+    margin-top: 1%;
+    height: 10%;
+    width: 25%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.47);
+}
 </style>
 <body>
     <div class="logo">
-        <img src="https://github.com/JaredOquindo/BeLead/blob/main/Beleadd.png?raw=true" alt="Trulli" width="100" height="100">
+        <img src="https://github.com/JaredOquindo/BeLead/blob/main/Beleadd.png?raw=true" width="100" height="100">
     </div>
     <div class="header">
-        <h1>DASHBOARD</h1>
+        <h1>HOME</h1>
+        {% csrf_token %}
+        <a href="{% url 'profile' %}"></a>
     </div>
     <div class="content">
-        <div class="head">
-            <div class="outer">
-                <div class="inside">
-                    <h6>ATTENDANCE</h6>
+        <div class="subjects2">
+            <a href="{% url 'attendance' %}">
+                <div class="subname">
+                    {% csrf_token %}
+                    <span class="button">ITMC222</span>
                 </div>
-                <div class="inside">
-                    <h6>SEAT PLAN</h6>
-                </div>
-                <div class="inside">
-                    <h6>MEMBERS</h6>
-                </div>
-            </div>
-        </div>
-        <div class="text-inside">
-            <h2>Please provide the details for the class</h2>
-        </div>
-        <div class="subject-name">
-            <h2>SUBJECT NAME</h2>
-            <div class="subject-box">
-                <label for="subject-name"></label>
-                <input type="text" id="subject-name" name="subject-name" value="">
-            </div>
-        </div>
-        <div class="subject-code">
-            <h2>SUBJECT CODE</h2>
-            <div class="subject-boxes">
-                <label for="subject-code"></label>
-                <input type="text" id="subject-code" name="subject-code" value="" class="">
-            </div>
-        </div>
-            <div class="Subject-Schedule">
-                <h2>Subject Schedule</h2>
-            </div>  
-            <div class="Timer">
-                <h2>Time</h2>
-            </div>
-            <div class="time">
-                <span> 
-                    <input type="timex1">
-                    <input type="timex2" id="time" value="">
-                    <span>-</span>
-                    <input type="timex3">
-                    <input type="timex4"id="time" value="">
-                </span>
-            </div>
-            <div class="day">
-                <h2>Day</h2>
-            </div>
-            <div class="schoolday">
-            <div class="week">
-                <span>
-                    <input type="radio">Mon</span>
-                    <input type="radio">Wed</span>
-                    <input type="radio">Fri</span>
-                </span>
-            <div class="weekday">
-                <span>
-                    <input type="radio">Tue</span>
-                    <input type="radio">Thu</span>
-                    <input type="radio">Sat</span>
-                </span>
-            </div>
-            <button class="next-button">NEXT</button>
-        </div>
-    </div>
-    </div>
+            </a>
 
+            <div class="subname2">
+                <h6>MWF 7:30Am - 9:00Am</h6>
+            </div>
+        </div>
+        <div class="subjects3">
+            <div class="name1">
+                <a href="{% url 'addsubject' %}">
+                    <img src="https://github.com/JaredOquindo/BeLead/blob/main/WEBSITE/image.png?raw=true" width="50" height="50">
+                </a>
+                {% csrf_token %}
+            </div>            
+        </div>
+        <div class="welcome">
+            <div class="insidewelcome">
+                <h1>Welcome Back, James!</h1>
+            </div>
+            <div class="design"></div>
+            <div class="design2"></div>
+        </div>
+    </div>
     <div class="class">
         <h3 class="dashboard">DASHBOARD</h3>
         <div class="dash">
-            <div class="subjects">
-                <h1>ITMC</h1>
+            <div class="subjects" onclick="redirectToAttendance()">
+                <h1 style="margin: auto;">ITMC222</h1>
             </div>
+            
+            <script>
+                function redirectToAttendance() {
+                    window.location.href = "{% url 'attendance' %}";
+                }
+            </script>
             <div class="nosubjects"></div>
-            <div class="nosubjects"></div>
+            <div class="nosubjects"></div>  
             <div class="nosubjects"></div>
             <div class="nosubjects"></div>
             <div class="nosubjects"></div>
@@ -401,9 +335,11 @@ body{
         </div>
         <div class="login">
             <h5 class="profile">profile</h5>
-            <h5 class="settings">Settings</h5>
+            <a href="{% url 'home' %}">
             <h5 class="logout">Logout</h5>
+            {% csrf_token %}
         </div>
     </div>
 </body>
 </html>
+  

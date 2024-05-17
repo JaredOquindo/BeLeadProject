@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <title>Attendance|part</title>
+    <title>Attendance</title>
     <style>
     body{
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
+
     }
     .logo{
         float: left;
@@ -114,9 +115,9 @@
         margin-right: 15%;
     }
     .login{
+        margin: 10px;
         text-align: center;
-        display: flex;
-        justify-content: center;
+        padding-left: 35px;
     }
     .dash{
         height: 80%;
@@ -276,6 +277,22 @@
         color: #fff;
         transform: translateY(1px);
     }
+    @font-face {
+            font-family: 'Changa One';
+            src: url('fonts/ChangaOne-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .custom-link {
+            font-size: 20px;
+        font-family: "Changa One", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -289,10 +306,12 @@
         <div class="head">
             <div class="outer">
                 <div class="inside">
-                    <h6>HOME</h6>
-                </div>
+                    {% csrf_token %}
+                    <a href="{% url 'profile' %}" class="custom-link">Home</a>
+                </div>                                     
                 <div class="inside">
-                    <h6>SEAT PLAN</h6>
+                    {% csrf_token %}
+                    <a href="{% url 'seatplan' %}" class="custom-link">Seat Plan</a>
                 </div>
             </div>
         </div>
@@ -370,7 +389,6 @@
             </div>
             <div class="print">Print</div>
         </div>
-        <!--copy tas edit niyo nalang dito-->
 
     </div>  
     <div class="class">
@@ -391,6 +409,8 @@
             <div class="nosubjects"></div>
         </div>
         <div class="login">
+            <a href="{% url 'home' %}">
+                {% csrf_token %}
             <h5 class="logout">Log Out</h5>
         </div>
     </div>

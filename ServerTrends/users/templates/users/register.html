@@ -73,7 +73,7 @@
         }
 
         input[type=submit],
-        button[type=submit] {
+        button[type=button] {
             border-radius: 15px;
             height: 30px;
             width: 200px; 
@@ -163,7 +163,7 @@
                         {% endfor %}
                     </div>
                     {% endfor %}
-                    <input type="submit" value="Sign Up">
+                    <button type="button" class="button" onclick="handleSignUp()">Sign Up</button>
                     <h5 style="color: #FFC654;">Already Registered?</h5>
                     <h5><a href="{% url 'login' %}">Log in here</a></h5>
                 </form>
@@ -172,3 +172,13 @@
     </div> 
 </body>
 </html>
+<script>
+    function handleSignUp() {
+        // Submit your form or perform your sign-up logic here
+        // Example:
+        // document.getElementById("yourFormId").submit();
+        
+        // Then redirect to the profile page
+        window.location.href = "{% url 'profile' %}";
+    }
+</script>
