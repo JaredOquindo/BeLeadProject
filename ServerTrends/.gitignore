@@ -5,9 +5,9 @@
 !.gitignore
 
 # Allow the TrendsBackEnd directory and its contents
-!TrendsBackEnd/
-!TrendsBackEnd/**
+TrendsBackEnd/
+TrendsBackEnd/**
 
 # Allow the users directory and its contents
-!users/
-!users/**
+users/
+users/**
