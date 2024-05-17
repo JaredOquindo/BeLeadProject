@@ -14,3 +14,9 @@
 # Allow the users directory and its contents
 !ServerTrends/users/
 !ServerTrends/users/**
+
+!TrendsBackend/users/
+!TrendsBackEnd/users/**
+
+!TrendsBackEnd/TrendsBackEnd/
+!TrendsBackEnd/TrendsBackEnd/**
