@@ -97,7 +97,7 @@
             font-family: "Changa One", sans-serif;
             font-style: normal;
             font-weight: 700;
-            color: rgb(219, 218, 218);
+            color: white;
             margin: 0; /* Remove the default margin */
             margin-top: 20px; /* Adjust the margin-top to center the h5 tags vertically */
         }
@@ -106,15 +106,15 @@
             text-align: center;
             font-family: "Changa One", sans-serif;
             font-style: normal;
-            font-weight: 700;
-            color: rgb(219, 218, 218);
+            font-weight: 100;
             margin: 10px 0; /* Adjust the margin */
+            color: white;
         }
 
         .right-column a {
-            color: #E3A72F;
             text-decoration: none;
             position: relative;
+            font-weight: 100;
         }
 
         .right-column a::after {
@@ -127,11 +127,21 @@
             transition: width .3s;
             bottom: -5px;
             left: 0;
+        }   
+        .button {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust padding as needed */
+            background-color: #503d2e; /* Set background color */
+            color: white; /* Set text color */
+            border-radius: 50px; /* Add border radius for rounded corners */
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: "Changa One", sans-serif;
+            font-style: normal;
+            font-weight: 100;
         }
 
-        .right-column a:hover::after {
-            width: 100%;
-        }
     </style>
 </head>
 <body>
@@ -147,13 +157,13 @@
                     <input type="email" name="email" required>
                     <h3>PASSWORD:</h3>
                     <input type="password" name="password" required>
-                    <input type="submit" value="Log In">
-                    <h5><a href="#">Forgot password?</a></h5>
-                    <h5><a href="{% url 'register' %}"></a></h5>
-                </form>
-                <p>Don't have an account? <a href="{% url 'register' %}">Signup here</a></p>
-                                    <a href="{% url 'profile' %}">profile</a>
+                    <br>
+                    <a href="{% url 'profile' %}" class="button">Sign In</a>
 
+
+                    <h5><a href="#" style="color: #E3A72F;">Forgot password?</a></h5>
+                </form>
+                <p>Don't have an account? <a href="{% url 'register' %}" style="color: #E3A72F;">Signup here</a></p>
             </div>
         </div>
     </div> 
