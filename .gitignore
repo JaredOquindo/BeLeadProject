@@ -4,10 +4,13 @@
 # Allow the .gitignore file itself
 !.gitignore
 
+# Allow the ServerTrends directory
+!ServerTrends/
+
 # Allow the TrendsBackEnd directory and its contents
-TrendsBackEnd/
-TrendsBackEnd/**
+!ServerTrends/TrendsBackEnd/
+!ServerTrends/TrendsBackEnd/**
 
 # Allow the users directory and its contents
-users/
-users/**
+!ServerTrends/users/
+!ServerTrends/users/**
