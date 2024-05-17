@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <title>Seat Plan</title>
+    <title>New Seat Plan</title>
 </head>
 <style>
 body{
@@ -73,7 +73,6 @@ body{
         font-style: normal;
         margin-left: 5%;
 }
-
 .class{
     border-radius: 12px;
     background-color: #ffffff9e;
@@ -118,14 +117,14 @@ body{
     
 }
 .custom-link {
-            font-size: 20px;
+        font-size: 20px;
         font-family: "Changa One", sans-serif;
         font-weight: 100;
         font-style: normal;
         text-decoration: none;
         color: whitesmoke;
         font-size: 18px;
-        }
+    }
 .custom-button {
     background-color: #E3A72F;
     font-family: "Changa One", sans-serif;
@@ -136,12 +135,11 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top:37%;
+    margin-top: 37%;
     cursor: pointer;
     border-radius: 10px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease; 
 }
-
 .custom-button:hover {
     background-color: #47392d;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
@@ -167,6 +165,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
+
 </style>
 <body>
     <div class="logo">
@@ -179,6 +178,7 @@ body{
         <div class="box">
             Teacher's Table
         </div>
+        
     <div class="head">
         <div class="outer">
             <div class="inside">
@@ -187,51 +187,49 @@ body{
             </div>                                     
             <div class="inside">
                 {% csrf_token %}
-                <a href="{% url 'attendance' %}" class="custom-link">Attendance</a>
+                <a href="{% url 'newattendance' %}" class="custom-link">Attendance</a>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="item" id="item1">Dale</div>
-        <div class="item" id="item2">Jared</div>
-        <div class="item" id="item3">Bogart</div>
-        <div class="item" id="item4" >Lawrence</div>
-        <div class="item" id="item5" >Catric</div>
-        <div class="item" id="item6" >James</div>
-        <div class="item" id="item7" >Raph</div>
-        <div class="item" id="item8" >Kent</div>
-        <div class="item" id="item9" >Kevin</div>
-        <div class="item" id="item10" >Joshua</div>
-        <div class="item" id="item11" >Kathy</div>
-        <div class="item" id="item12" >Alyssa</div>
-        <div class="item" id="item13" >Manuel</div>
-        <div class="item" id="item14" >Wisdom</div>
-        <div class="item" id="item15" >Joriz</div>
-        <div class="item" id="item16" >Adrian</div>
-        <div class="item" id="item17" contenteditable="true"></div>
-        <div class="item" id="item18" contenteditable="true"></div>
-        <div class="item" id="item19" >Ferdie</div>
-        <div class="item" id="item20" contenteditable="true"></div>
-      
-    </div>
-    <button class="custom-button">
-        <a href="{% url 'profile' %}" style="color: white;">Save</a>
-    </button>
-    
-    
-</div>
+        <div class="container">
+            <div class="item" id="item1" contenteditable="true"></div>
+            <div class="item" id="item2" contenteditable="true"></div>
+            <div class="item" id="item3" contenteditable="true"></div>
+            <div class="item" id="item4" contenteditable="true"></div>
+            <div class="item" id="item5" contenteditable="true"></div>
+            <div class="item" id="item6" contenteditable="true"></div>
+            <div class="item" id="item7" contenteditable="true"></div>
+            <div class="item" id="item8" contenteditable="true"></div>
+            <div class="item" id="item9" contenteditable="true"></div>
+            <div class="item" id="item10" contenteditable="true"></div>
+            <div class="item" id="item11" contenteditable="true"></div>
+            <div class="item" id="item12" contenteditable="true"></div>
+            <div class="item" id="item13" contenteditable="true"></div>
+            <div class="item" id="item14" contenteditable="true"></div>
+            <div class="item" id="item15" contenteditable="true"></div>
+            <div class="item" id="item16" contenteditable="true"></div>
+            <div class="item" id="item17" contenteditable="true"></div>
+            <div class="item" id="item18" contenteditable="true"></div>
+            <div class="item" id="item19" contenteditable="true"></div>
+            <div class="item" id="item20" contenteditable="true"></div>
+       
+        </div>
+        <button class="custom-button">
+            <a href="{% url 'profile' %}" style="color: white;">Save</a>
+        </button>
+            </div>
 
 </body>
 </html>
 <script>
-    
+ 
     function updateItem(event) {
         var itemElement = event.target;
         var userInput = itemElement.textContent.trim();
-     
+    
         if (userInput !== "") {
             itemElement.textContent = userInput;
-          
+         
             localStorage.setItem(itemElement.id, userInput);
         }
     }
@@ -246,7 +244,7 @@ body{
         });
     }
 
-    // Add event listener to container to handle clicks on items
+  
     document.querySelector('.container').addEventListener('click', function(event) {
         if (event.target.classList.contains('item')) {
             updateItem(event);

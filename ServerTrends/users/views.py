@@ -32,3 +32,12 @@ def seatplan(request):
 
 def addsubject(request):
     return render(request, 'users/addsubject.html')
+
+def newattendance(request):
+    return render(request, 'users/newattendance.html')
+
+def newseatplan(request):
+    return render(request, 'users/newseatplan.html')
+
+def newprofile(request):
+    return render(request, 'users/newprofile.html')

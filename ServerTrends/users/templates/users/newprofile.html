@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <title>Attendance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Profile</title>
     <style>
     body{
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
-
     }
     .logo{
         float: left;
@@ -22,6 +22,7 @@
         text-align: right;
         width: 95%;
         padding: 10px;
+        font-weight: 100;
     }
     .content{
         border-radius: 12px;
@@ -118,8 +119,6 @@
         margin: 10px;
         text-align: center;
         padding-left: 35px;
-        text-decoration: none;
-        
     }
     .dash{
         height: 75%;
@@ -151,8 +150,8 @@
     }
 
     .subjects{
-        font-family: 'Changa One';
-        text-align: center;
+            font-family: 'Changa One';
+        text-align:left;
         border-radius: 12px;
         background-color: #47392d;
         width: 95%;
@@ -163,8 +162,8 @@
         cursor: pointer;
         box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
         display: flex;
-        justify-content: center;
-        font-weight: 100;
+            justify-content: center;
+            font-weight: 100;
     }
     .nosubjects{
         font-family: 'Changa One';
@@ -259,37 +258,84 @@
         justify-content: center;
         align-items: center;
     }
-    .custom-button {
+    .print{
+        font-family: 'Changa One';
         background-color: #E3A72F;
-        font-family: "Changa One", sans-serif;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
+        margin-left: 80%;
         border-radius: 50px;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease; 
-        margin-left: 85%;
-}
-
-    .custom-button:hover {
+        padding-top: 5px;
+        text-align: center;
+        width: 10%;
+        height: 5%;
+        cursor: pointer;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+    }
+    .print:hover{
         background-color: #47392d;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
         color: #fff;
         transform: translateY(1px);
-}
-    .custom-link {
-        font-size: 20px;
+    }
+    .profile-part {
+        width: 75%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .profile-part .profile-pic {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: 5px solid white; 
+    }
+    .profile-part .profile-pic img {
+        width: 100%;
+        height: auto;
+        border-color: white;
+    }
+    .profile-part .profile-info {
+        margin-bottom: 20px;
+    }
+    .profile-part .profile-info label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
         font-family: "Changa One", sans-serif;
         font-weight: 100;
         font-style: normal;
-        text-decoration: none;
-        color: whitesmoke;
-        font-size: 18px;
-        }
+        color: white;
+        font-size: 17px;
+        font-family: "Kodchasan", sans-serif;
+        font-weight:normal;
+        font-style: normal;
+        margin-top: 5px;
+    }
+    .profile-part .profile-info span {
+        font-family: "Kodchasan", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        color: #503D2E;
+        background-color: white;
+        border-radius: 50px;
+        width: 800px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        max-width: 100%;
+        padding: auto;
+    }
+    .box {
+        background-color: #7B6F63;
+        border-radius: 50px;
+        width: 70%;
+        height: 20%;
+        padding: 20px; 
+    }
     </style>
 </head>
 <body>
@@ -297,97 +343,37 @@
         <img src="https://github.com/JaredOquindo/BeLead/blob/main/Beleadd.png?raw=true" width="100" height="100">
     </div>
     <div class="header">
-        <h1>Attendance</h1>
+        <h1>Profile</h1>
     </div>
     <div class="content">
-        <div class="head">
-            <div class="outer">
-                <div class="inside">
-                    {% csrf_token %}
-                    <a href="{% url 'profile' %}" class="custom-link">Home</a>
-                </div>                                     
-                <div class="inside">
-                    {% csrf_token %}
-                    <a href="{% url 'seatplan' %}" class="custom-link">Seat Plan</a>
+        <div class="profile-part">
+            <div class="profile-pic">
+                <img src="https://github.com/JaredOquindo/BeLeadProject/blob/main/ServerTrends/james%20maderazo.jpg?raw=true" alt="Profile Picture">
+            </div>
+            <div class="box">
+                <div class="profile-info">
+                    <label for="name">NAME:</label>
+                    <span id="name">James P. Maderazo</span>
+                    <label for="email">EMAIL:</label>
+                    <span id="email">jamaderazo@gbox.adnu.edu.ph</span>
+                    <label for="dob">DATE OF BIRTH:</label>
+                    <span id="dob">July 3, 2004</span>
                 </div>
             </div>
         </div>
-
-        <div class="body2">
-            <div class="name">Name</div>
-            <div class="TA2">TA</div>
-            <div class="TP2">TP</div>
-            <div class="TE2">TE</div>
-            <div class="student">
-                <div class="student2">Jared Oquindo</div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2">Joshua Castañeda </div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2">Dale King </div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-                <div class="student2" contenteditable="true"></div>
-                <div class="TA" contenteditable="true"></div>
-                <div class="TP" contenteditable="true"></div>
-                <div class="TE" contenteditable="true"></div>
-            </div>
-            <button class="custom-button">
-                <a href="{% url 'profile' %}" style="color: white;">Print</a>
-            </button>
-        </div>
-        
-
     </div>  
     <div class="class">
         <h3 class="dashboard">DASHBOARD</h3>
         <div class="dash">
-            <div class="subjects">
-                <h1 style="margin: auto ">ITMC222</h1>
+            <div class="subjects" onclick="redirectToAttendance()">
+                <h1 style="margin: auto;">ITMC222</h1>
             </div>
+            
+            <script>
+                function redirectToAttendance() {
+                    window.location.href = "{% url 'attendance' %}";
+                }
+            </script>
             <div class="nosubjects"></div>
             <div class="nosubjects"></div>
             <div class="nosubjects"></div>
@@ -400,8 +386,8 @@
             <div class="nosubjects"></div>
         </div>
         <div class="login">
-            <a href="{% url 'newprofile' %}">
-                <h5 class="profile">Profile</h5>
+            <a href="{% url 'profile' %}">
+                <h5 class="profile">Back</h5>
             </a>
             <a href="{% url 'home' %}">
                 <h5 class="logout">Logout</h5>
@@ -410,29 +396,3 @@
     </div>
 </body>
 </html>
-<script>
-    function updateItem(event) {
-        var itemElement = event.target;
-        var userInput = itemElement.textContent.trim();
-        if (userInput !== "") {
-            itemElement.textContent = userInput;
-           
-            localStorage.setItem(itemElement.classList[0], userInput);
-        }
-    }
-    function restoreData() {
-        var items = document.querySelectorAll('.student2, .TA, .TP, .TE');
-        items.forEach(function(item) {
-            var savedData = localStorage.getItem(item.classList[0]); 
-            if (savedData !== null) {
-                item.textContent = savedData;
-            }
-        });
-    }
-    document.querySelector('.student').addEventListener('input', function(event) {
-        if (event.target.classList.contains('student2') || event.target.classList.contains('TA') || event.target.classList.contains('TP') || event.target.classList.contains('TE')) {
-            updateItem(event);
-        }
-    });
-
-</script>

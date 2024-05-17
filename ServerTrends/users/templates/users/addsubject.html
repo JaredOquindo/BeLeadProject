@@ -50,36 +50,40 @@ body{
     margin-bottom: 2%;
 }
 .outer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
-    background-color: #E3A72F;
-    border-radius: 50px;
-    margin-left: 65%;
-    width: 30%;
-    height: 90%;
-    border: 1px solid rgba(0, 0, 0, 0.397);
-    padding-right: 1%;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+        background-color: #E3A72F;
+        border-radius: 50px;
+        width: 300px;
+        height: 89px;
+        border: 1px solid rgba(0, 0, 0, 0.397);
+        padding-right: 1%;
+        margin: 1% 0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin-right: 2%;
 }
 .inside{
-    background-color: white;
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
-    font-family: 'Changa One';
-    letter-spacing: 1px;
-    color:#47392d;
-    text-shadow: 2px 2px 4px #47392d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 50px;
-    margin-left:3%;
-    float: left;
-    width: 30%;
-    height: 70%;
-    border: 1px solid rgba(0, 0, 0, 0.397);
-    cursor: pointer;
+    background-color: #503D2E;
+        letter-spacing: 1px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 50px;
+        margin: 0 1%;
+        width: 135px;
+        height: 56px;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: "Changa One", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        margin-left: 5%;
 }
 .inside:hover{
     background-color: #47392d;
@@ -101,19 +105,23 @@ body{
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 .dashboard{
-    font-family: 'Changa One';
-    font-size:larger;
-    padding-left: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px #47392d;
+     font-family: 'Changa One';
+        font-size:larger;
+        padding-left: 20px;
+        color: white;
+        text-shadow: 2px 2px 4px #47392d;
+        display: flex;
+        justify-content: center;
+        margin-right: 15%;
 }
 .login{
     margin: 10px;
     text-align: center;
     padding-left: 35px;
+    text-decoration: none;
 }
 .dash{
-    height: 60%;
+    height: 75%;
     border-radius: 12px;
     margin: 10px;
     padding: 5px;
@@ -122,37 +130,40 @@ body{
 }
 .profile,.settings,.logout{
     font-family: 'Changa One';
-    border-radius: 12px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    height: 30px;
-    padding: 5px;
-    box-sizing: border-box;
-    background-color: #E3A72F;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    color: #47392d;
+        border-radius: 50px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        width: 70%;
+        height: 30px;
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: #E3A72F;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        color: white;
+        font-weight: 100;
 }
 .profile:hover,.settings:hover,.logout:hover {
     background-color: #47392d;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
     color: #fff;
-    transform: translateY(-5px);
+    transform: translateY(-5px);    
 }
 
 .subjects{
     font-family: 'Changa One';
-    text-align:left;
-    padding-left: 15px;
-    border-radius: 12px;
-    background-color: #47392d;
-    width: 90%;
-    height: 15%;
-    margin-bottom: 10px;
-    color: white;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+        text-align: center;
+        border-radius: 12px;
+        background-color: #47392d;
+        width: 95%;
+        height: 15%;
+        margin-bottom: 10px;
+        color: white;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+        display: flex;
+        justify-content: center;
+        font-weight: 100;
 }
 .nosubjects{
     font-family: 'Changa One';
@@ -196,14 +207,12 @@ body{
 .text-inside {
     color:#503D2E;
     font-family: 'Changa One';
-    margin-top: 5%;
+    margin-top: 7%;
     text-align: center;
     margin-left: 1%;
     font-size:x-large;
-    margin-top: 10px;
 }
 .subject-name{
-    
     font-family: 'Changa One';
     color:#503D2E;
     width: 100%;
@@ -235,6 +244,7 @@ body{
     border: none;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
     border-radius: 20px;
+    text-align: center;
     background-color: white; 
     width:40%;
     margin-left: 1%;  
@@ -308,29 +318,38 @@ body{
     font-family: 'Changa One';
     margin-left: 75%;
 }
-
+.pointer-cursor {
+    font-family: 'Changa One', sans-serif;
+    background-color: #E3A72F;
+    margin-left: 80%;
+    border-radius: 50px;
+    padding: 10px 20px; 
+    text-align: center;
+    width: 15%;
+    height: auto; 
+    cursor: pointer;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease; 
+}
+.pointer-cursor:hover {
+    background-color: #47392d;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-2px); 
+}
 </style>
 <body>
     <div class="logo">
         <img src="https://github.com/JaredOquindo/BeLead/blob/main/Beleadd.png?raw=true" alt="Trulli" width="100" height="100">
     </div>
     <div class="header">
-        <h1>DASHBOARD</h1>
+        <h1>SEAT PLAN</h1>
     </div>
     <div class="content">
-        <div class="head">
-            <div class="outer">
-                <div class="inside">
-                    <h6>ATTENDANCE</h6>
-                </div>
-                <div class="inside">
-                    <h6>SEAT PLAN</h6>
-                </div>
-                <div class="inside">
-                    <h6>MEMBERS</h6>
-                </div>
-            </div>
-        </div>
+        
         <div class="text-inside">
             <h2>Please provide the details for the class</h2>
         </div>
@@ -385,7 +404,10 @@ body{
                     </div>
                 </div>
             </div>
-            <button class="next-button">NEXT</button>  
+            <form method="post" action="{% url 'newattendance' %}">
+                {% csrf_token %}
+                <button type="submit" class="next-button pointer-cursor">NEXT</button>
+            </form>
         </div>
     </div>
 
@@ -393,7 +415,7 @@ body{
         <h3 class="dashboard">DASHBOARD</h3>
         <div class="dash">
             <div class="subjects">
-                <h1>ITMC</h1>
+                <h1>ITMC222</h1>
             </div>
             <div class="nosubjects"></div>
             <div class="nosubjects"></div>
@@ -407,9 +429,12 @@ body{
             <div class="nosubjects"></div>
         </div>
         <div class="login">
-            <h5 class="profile">profile</h5>
-            <h5 class="settings">Settings</h5>
-            <h5 class="logout">Logout</h5>
+            <a href="{% url 'newprofile' %}">
+                <h5 class="profile">Profile</h5>
+            </a>
+            <a href="{% url 'home' %}">
+                <h5 class="logout">Logout</h5>
+            </a>
         </div>
     </div>
 </body>

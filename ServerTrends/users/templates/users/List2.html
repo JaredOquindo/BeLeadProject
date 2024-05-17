@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <title>Attendance</title>
+    <title>Attendance|part</title>
     <style>
     body{
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
-
     }
     .logo{
         float: left;
@@ -115,14 +114,12 @@
         margin-right: 15%;
     }
     .login{
-        margin: 10px;
         text-align: center;
-        padding-left: 35px;
-        text-decoration: none;
-        
+        display: flex;
+        justify-content: center;
     }
     .dash{
-        height: 75%;
+        height: 80%;
         border-radius: 12px;
         margin: 10px;
         padding: 5px;
@@ -259,37 +256,26 @@
         justify-content: center;
         align-items: center;
     }
-    .custom-button {
+    .print{
+        font-family: 'Changa One';
         background-color: #E3A72F;
-        font-family: "Changa One", sans-serif;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
+        margin-left: 80%;
         border-radius: 50px;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease; 
-        margin-left: 85%;
-}
-
-    .custom-button:hover {
+        padding-top: 5px;
+        text-align: center;
+        width: 10%;
+        height: 5%;
+        cursor: pointer;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+    }
+    .print:hover{
         background-color: #47392d;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
         color: #fff;
         transform: translateY(1px);
-}
-    .custom-link {
-        font-size: 20px;
-        font-family: "Changa One", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-        text-decoration: none;
-        color: whitesmoke;
-        font-size: 18px;
-        }
+    }
     </style>
 </head>
 <body>
@@ -303,12 +289,10 @@
         <div class="head">
             <div class="outer">
                 <div class="inside">
-                    {% csrf_token %}
-                    <a href="{% url 'profile' %}" class="custom-link">Home</a>
-                </div>                                     
+                    <h6>HOME</h6>
+                </div>
                 <div class="inside">
-                    {% csrf_token %}
-                    <a href="{% url 'seatplan' %}" class="custom-link">Seat Plan</a>
+                    <h6>SEAT PLAN</h6>
                 </div>
             </div>
         </div>
@@ -319,21 +303,30 @@
             <div class="TP2">TP</div>
             <div class="TE2">TE</div>
             <div class="student">
-                <div class="student2">Jared Oquindo</div>
+                <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2">Joshua Castañeda </div>
+                <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2">Dale King </div>
+                <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
-        
+                <div class="student2" contenteditable="true"></div>
+                <div class="TA" contenteditable="true"></div>
+                <div class="TP" contenteditable="true"></div>
+                <div class="TE" contenteditable="true"></div>
+                <div class="student2" contenteditable="true"></div>
+                <div class="TA" contenteditable="true"></div>
+                <div class="TP" contenteditable="true"></div>
+                <div class="TE" contenteditable="true"></div>
+                <div class="student2" contenteditable="true"></div>
+                <div class="TA" contenteditable="true"></div>
+                <div class="TP" contenteditable="true"></div>
+                <div class="TE" contenteditable="true"></div>
                 <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
@@ -375,11 +368,9 @@
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
             </div>
-            <button class="custom-button">
-                <a href="{% url 'profile' %}" style="color: white;">Print</a>
-            </button>
+            <div class="print">Print</div>
         </div>
-        
+        <!--copy tas edit niyo nalang dito-->
 
     </div>  
     <div class="class">
@@ -400,35 +391,36 @@
             <div class="nosubjects"></div>
         </div>
         <div class="login">
-            <a href="{% url 'newprofile' %}">
-                <h5 class="profile">Profile</h5>
-            </a>
-            <a href="{% url 'home' %}">
-                <h5 class="logout">Logout</h5>
-            </a>
+            <h5 class="logout">Log Out</h5>
         </div>
     </div>
 </body>
 </html>
 <script>
+    // Function to handle user input and update items
     function updateItem(event) {
         var itemElement = event.target;
         var userInput = itemElement.textContent.trim();
+        // Update item only if user input is not empty
         if (userInput !== "") {
             itemElement.textContent = userInput;
-           
-            localStorage.setItem(itemElement.classList[0], userInput);
+            // Save data to local storage
+            localStorage.setItem(itemElement.classList[0], userInput); // Save using the first class
         }
     }
+
+    // Restore saved data from local storage
     function restoreData() {
         var items = document.querySelectorAll('.student2, .TA, .TP, .TE');
         items.forEach(function(item) {
-            var savedData = localStorage.getItem(item.classList[0]); 
+            var savedData = localStorage.getItem(item.classList[0]); // Get saved data using the first class
             if (savedData !== null) {
                 item.textContent = savedData;
             }
         });
     }
+
+    // Add event listener to container to handle clicks on items
     document.querySelector('.student').addEventListener('input', function(event) {
         if (event.target.classList.contains('student2') || event.target.classList.contains('TA') || event.target.classList.contains('TP') || event.target.classList.contains('TE')) {
             updateItem(event);

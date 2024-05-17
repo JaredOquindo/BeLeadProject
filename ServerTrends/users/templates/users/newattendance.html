@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
-    <title>Attendance</title>
+    <title>New Attendance</title>
     <style>
     body{
         background-repeat: no-repeat;
@@ -272,24 +272,23 @@
         cursor: pointer;
         border-radius: 50px;
         transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease; 
-        margin-left: 85%;
-}
-
+        margin-left: 85%;   
+    }
     .custom-button:hover {
         background-color: #47392d;
         box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
         color: #fff;
         transform: translateY(1px);
-}
-    .custom-link {
-        font-size: 20px;
+    }
+      .custom-link {
+            font-size: 20px;
         font-family: "Changa One", sans-serif;
         font-weight: 100;
         font-style: normal;
         text-decoration: none;
         color: whitesmoke;
         font-size: 18px;
-        }
+    }
     </style>
 </head>
 <body>
@@ -308,7 +307,7 @@
                 </div>                                     
                 <div class="inside">
                     {% csrf_token %}
-                    <a href="{% url 'seatplan' %}" class="custom-link">Seat Plan</a>
+                    <a href="{% url 'newseatplan' %}" class="custom-link">Seat Plan</a>
                 </div>
             </div>
         </div>
@@ -319,21 +318,30 @@
             <div class="TP2">TP</div>
             <div class="TE2">TE</div>
             <div class="student">
-                <div class="student2">Jared Oquindo</div>
+                <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2">Joshua Castañeda </div>
+                <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
-        
-                <div class="student2">Dale King </div>
+                <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
                 <div class="TE" contenteditable="true"></div>
-        
+                <div class="student2" contenteditable="true"></div>
+                <div class="TA" contenteditable="true"></div>
+                <div class="TP" contenteditable="true"></div>
+                <div class="TE" contenteditable="true"></div>
+                <div class="student2" contenteditable="true"></div>
+                <div class="TA" contenteditable="true"></div>
+                <div class="TP" contenteditable="true"></div>
+                <div class="TE" contenteditable="true"></div>
+                <div class="student2" contenteditable="true"></div>
+                <div class="TA" contenteditable="true"></div>
+                <div class="TP" contenteditable="true"></div>
+                <div class="TE" contenteditable="true"></div>
                 <div class="student2" contenteditable="true"></div>
                 <div class="TA" contenteditable="true"></div>
                 <div class="TP" contenteditable="true"></div>
@@ -378,9 +386,7 @@
             <button class="custom-button">
                 <a href="{% url 'profile' %}" style="color: white;">Print</a>
             </button>
-        </div>
-        
-
+                </div>
     </div>  
     <div class="class">
         <h3 class="dashboard">DASHBOARD</h3>
@@ -411,15 +417,18 @@
 </body>
 </html>
 <script>
+  
     function updateItem(event) {
         var itemElement = event.target;
         var userInput = itemElement.textContent.trim();
+       
         if (userInput !== "") {
             itemElement.textContent = userInput;
-           
-            localStorage.setItem(itemElement.classList[0], userInput);
+          
+            localStorage.setItem(itemElement.classList[0], userInput); 
         }
     }
+
     function restoreData() {
         var items = document.querySelectorAll('.student2, .TA, .TP, .TE');
         items.forEach(function(item) {
@@ -429,6 +438,8 @@
             }
         });
     }
+
+    
     document.querySelector('.student').addEventListener('input', function(event) {
         if (event.target.classList.contains('student2') || event.target.classList.contains('TA') || event.target.classList.contains('TP') || event.target.classList.contains('TE')) {
             updateItem(event);
