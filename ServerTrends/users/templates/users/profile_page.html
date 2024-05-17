@@ -311,7 +311,7 @@
         font-family: "Kodchasan", sans-serif;
         font-weight:normal;
         font-style: normal;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     .profile-part .profile-info span {
         font-family: "Kodchasan", sans-serif;
@@ -320,14 +320,22 @@
         color: #503D2E;
         background-color: white;
         border-radius: 50px;
-        width: 711px;
-        height: 48px;
+        width: 800px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center; /* Added to center text vertically */
         text-align: center; /* Added to center text horizontally */
+        max-width: 100%;
+        padding: auto;
     }
-    
+    .box {
+        background-color: #7B6F63;
+        border-radius: 50px;
+        width: 70%;
+        height: 20%;
+        padding: 20px; /* Add some padding inside the box */
+    }
     </style>
 </head>
 <body>
@@ -342,13 +350,15 @@
             <div class="profile-pic">
                 <img src="https://github.com/JaredOquindo/BeLeadProject/blob/main/ServerTrends/james%20maderazo.jpg?raw=true" alt="Profile Picture">
             </div>
-            <div class="profile-info">
-                <label for="name">NAME:</label>
-                <span id="name">James P. Maderazo</span>
-                <label for="email">EMAIL:</label>
-                <span id="email">jamaderazo@gbox.adnu.edu.ph</span>
-                <label for="dob">DATE OF BIRTH:</label>
-                <span id="dob">July 3, 2004</span>
+            <div class="box">
+                <div class="profile-info">
+                    <label for="name">NAME:</label>
+                    <span id="name">James P. Maderazo</span>
+                    <label for="email">EMAIL:</label>
+                    <span id="email">jamaderazo@gbox.adnu.edu.ph</span>
+                    <label for="dob">DATE OF BIRTH:</label>
+                    <span id="dob">July 3, 2004</span>
+                </div>
             </div>
         </div>
     </div>  
