@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .forms import UserRegistrationForm
-
 
 def home(request):
     return render(request, 'users/home.html')
@@ -18,5 +18,8 @@ def register(request):
     else:
         form = UserRegistrationForm()
         
-    context = {'form' : form}
+    context = {'form': form}
     return render(request, 'users/register.html', context)
+
+def profile(request):
+    return render(request, 'users/profile.html')
