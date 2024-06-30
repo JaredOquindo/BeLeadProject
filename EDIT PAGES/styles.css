@@ -1,0 +1,260 @@
+/*PAGE TEMPLATE CSS*/
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
+} 
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}    
+::-webkit-scrollbar-track {
+    border: 1px solid #ffffff00;
+    border-radius: 10px;
+}    
+::-webkit-scrollbar-thumb {
+    background: #503d2e2d;  
+    border-radius: 10px;
+}    
+.header-container{
+    display: flex;
+    align-items: center;
+}
+.header-container p{
+    font-family: 'Changa One';
+    color: white;
+    text-shadow: 2px 2px 4px #47392d;
+    text-align: right;
+    width: 95%;
+    padding: 10px;
+    font-size: 30px;
+    margin-left: auto;
+}
+.header-container img {       
+    margin-right: 10px;
+}   
+.container{
+    border-radius: 12px;
+    background-color: #ffffff9e;
+    position: absolute;
+    height: 80%;
+    width: 75%;
+    left: 20%;
+    padding: 1%;
+    margin: 1%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    padding-left: 1%;
+}
+.dashboard {
+    border-radius: 12px;
+    background-color: #ffffff9e;
+    position: absolute;
+    height: 80%;
+    width: 15%;
+    left: auto;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    padding: 1%;
+    margin: 1%;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard h3 {
+    font-family: 'Changa One';
+    font-size: larger;
+    padding-left: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px #47392d;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5vw;
+}
+
+.dash {
+    flex: 1;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.dash h1 {
+    font-family: 'Changa One';
+    text-align: center;
+    border-radius: 12px;
+    background-color: #47392d;
+    width: 90%;
+    height: 15%;
+    margin: auto;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    font-size: 2vw;
+}
+
+.button {
+    font-family: 'Changa One';
+    border-radius: 50px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 30px;
+    padding: 5px;
+    background-color: #E3A72F;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.nosubjects {
+    font-family: 'Changa One';
+    text-align: center;
+    border-radius: 12px;
+    background-color: #47392d75;
+    width: 90%;
+    height: 15%;
+    margin: 10px auto;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+}   
+/*PAGE TEMPLATE CSS*/
+/* HOME PAGE CSS*/
+.class-block {
+    float: left;
+    border-radius: 12px;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 20%; 
+    width: 20%; 
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    position: relative;
+    font-family: 'Changa One';
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#with-class {
+    background-color: #503d2e;
+}
+
+#without-class {
+    background-color: #503d2e88;
+}
+
+.class-block span {
+    font-size: 2vw; 
+    margin-top: 10px; 
+}
+
+.class-block h6 {
+    font-size: 1vw; 
+    margin-bottom: 10px; 
+}
+/*HOME PAGE CSS*/
+
+/*NAVIGATION BAR CSS*/
+.navigation-bar {
+    margin-top: 10px;
+    height: 10%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+    background-color: #E3A72F;
+    border-radius: 50px;
+    width: 275px;
+    height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    padding-right: 1%;
+    margin: 1% 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-right: 2%;
+}
+
+.navigation-bar p{
+    background-color: #503D2E;
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 1%;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Changa One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 5%;
+}
+/*NAVIGATION BAR CSS*/
+
+/*ATTENDANCE PAGE CSS*/
+
+.attendance-body{
+    padding: 10px;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    background-color: #7C7063;
+    border-radius: 50px;
+    height: 75%;
+    font-family: 'Changa One';
+    margin-left: 4%;
+    width: 85%;
+    color: #47392d;
+    padding-top: 5%;
+    padding-left: 5%;
+    color:white;
+    margin-top: 90px;
+}
+
+.student-name{
+    width: 35%;  
+}
+
+.record{        
+    width: 10%;       
+}
+
+.student-name, .record{
+    background-color: #f9f8f65e;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+    margin-right: 5%;
+    float: left;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
+    margin-bottom: 1%;
+}
+
+.student-record{
+    width: 95%;
+    height: 80%;
+    margin-bottom: 1%;
+    padding-right: 1%;
+    overflow: scroll;
+}
+
+/*ATTENDANCE PAGE CSS*/
