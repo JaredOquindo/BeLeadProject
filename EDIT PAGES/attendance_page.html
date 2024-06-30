@@ -6,73 +6,56 @@
     <link href='https://fonts.googleapis.com/css?family=Changa One' rel='stylesheet'>
     <title>Attendance</title>
     <link rel="stylesheet" href="styles.css">
-    <style> 
-    .name{
-        float: left;
-        width: 35%;
-        height: 5%;
-    }
-    .TE2{
-        float: left;
-        width: 10%;
-        height: 5%;
-        margin-left: 3%;
-        display: flex;
-        justify-content: center;
-        font-size: 15px;
-    }
-    </style>
 </head>
 <body>
 
-    <header class = "header-container">
+    <header class="header-container">
         <img src="https://github.com/JaredOquindo/BeLead/blob/main/Beleadd.png?raw=true" width="100" height="100">
         <p>ATTENDANCE</p>
     </header>
 
     <div class="container">
-
         <div class="navigation-bar">
             <p>Home</p>                                    
             <p>Seat Plan</p>
         </div>
 
-        <div class="attendance-body">
-            <div class="name">Name</div>
-            <div class="TE2">Total Absent</div>
-            <div class="TE2">Total Late</div>
-            <div class="TE2">Total Excused</div>
-            <div class="TE2">Total Present</div>
+        <div class="attendance-body">          
             <div class="student-record">
+                <div class="header-row">
+                    <div class="name">Name</div>
+                    <div class="TE2">Total Present</div>
+                    <div class="TE2">Total Absent</div>
+                    <div class="TE2">Total Late</div>
+                    <div class="TE2">Total Excuse</div>
+                </div>
 
-                <div class="student-name">Jared Oquindo</div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-        
-                <div class="student-name">Joshua Castañeda </div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
+                <div class="student-row">
+                    <div class="student-name">Jared Oquindo</div>
+                    <div class="record">5</div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                </div>
 
-                <div class="student-name">Dale King </div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-        
-                <div class="student-name"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
-                <div class="record"></div>
+                <div class="student-row">
+                    <div class="student-name">Joshua Castañeda</div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                </div>
+
+                <div class="student-row">
+                    <div class="student-name">Dale King</div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                    <div class="record"></div>
+                </div>
             </div>
             <h5 class="button">PRINT</h5>
         </div>
-        
-
     </div>
 
     <div class="dashboard">

@@ -1,26 +1,31 @@
-/*PAGE TEMPLATE CSS*/
-body{
+/*TEMPLATE CSS*/
+body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url(https://github.com/JaredOquindo/BeLead/blob/main/finals.png?raw=true);
-} 
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
-}    
+}
+
 ::-webkit-scrollbar-track {
     border: 1px solid #ffffff00;
     border-radius: 10px;
-}    
+}
+
 ::-webkit-scrollbar-thumb {
     background: #503d2e2d;  
     border-radius: 10px;
-}    
-.header-container{
+}
+
+.header-container {
     display: flex;
     align-items: center;
 }
-.header-container p{
+
+.header-container p {
     font-family: 'Changa One';
     color: white;
     text-shadow: 2px 2px 4px #47392d;
@@ -30,10 +35,12 @@ body{
     font-size: 30px;
     margin-left: auto;
 }
+
 .header-container img {       
     margin-right: 10px;
-}   
-.container{
+} 
+
+.container {
     border-radius: 12px;
     background-color: #ffffff9e;
     position: absolute;
@@ -45,6 +52,7 @@ body{
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
     padding-left: 1%;
 }
+
 .dashboard {
     border-radius: 12px;
     background-color: #ffffff9e;
@@ -127,8 +135,10 @@ body{
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
-}   
-/*PAGE TEMPLATE CSS*/
+} 
+
+/*TEMPLATE CSS*/
+
 /* HOME PAGE CSS*/
 .class-block {
     float: left;
@@ -168,6 +178,7 @@ body{
 /*HOME PAGE CSS*/
 
 /*NAVIGATION BAR CSS*/
+
 .navigation-bar {
     margin-top: 10px;
     height: 10%;
@@ -189,7 +200,7 @@ body{
     margin-right: 2%;
 }
 
-.navigation-bar p{
+.navigation-bar p {
     background-color: #503D2E;
     letter-spacing: 1px;
     color: white;
@@ -208,11 +219,11 @@ body{
     font-style: normal;
     margin-left: 5%;
 }
+
 /*NAVIGATION BAR CSS*/
 
 /*ATTENDANCE PAGE CSS*/
-
-.attendance-body{
+.attendance-body {
     padding: 10px;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
     background-color: #7C7063;
@@ -224,37 +235,39 @@ body{
     color: #47392d;
     padding-top: 5%;
     padding-left: 5%;
-    color:white;
+    color: white;
     margin-top: 90px;
 }
 
-.student-name{
-    width: 35%;  
-}
-
-.record{        
-    width: 10%;       
-}
-
-.student-name, .record{
-    background-color: #f9f8f65e;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7%;
-    margin-right: 5%;
-    float: left;
-    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
-    margin-bottom: 1%;
-}
-
-.student-record{
+.student-record {
     width: 95%;
     height: 80%;
     margin-bottom: 1%;
     padding-right: 1%;
     overflow: scroll;
+}
+
+.header-row, .student-row {
+    display: grid;
+    grid-template-columns: 35% 10% 10% 10% 10%;
+    gap: 5%;
+    margin-bottom: 1%;
+}
+
+.TE2 {
+    height: 7%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.student-name, .record {
+    background-color: #f9f8f65e;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
 }
 
 /*ATTENDANCE PAGE CSS*/
